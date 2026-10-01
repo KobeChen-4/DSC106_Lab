@@ -15,6 +15,147 @@
         <a href="https://github.com/KobeChen-4" target="_blank">GitHub</a>
     </nav>
 
-    <h1>CV</h1>
+    <header>
+        <h1>Taoyue (Kobe) Chen</h1>
+        <p>
+            <a href="mailto:koc001@ucsd.edu">koc001@ucsd.edu</a> ·
+            <a href="https://github.com/KobeChen-4" target="_blank">github.com/KobeChen-4</a>
+        </p>
+        <p>Department of Data Science, University of California, San Diego · La Jolla, CA, USA</p>
+    </header>
+
+    <section>
+        <h2>Research Interests</h2>
+        <p>
+            Machine learning and large language models. Interests include how models generalize to new data
+            and how that generalization is evaluated, machine learning for biology, including biological
+            sequence foundation models, computational tools for biological data, and predictive modeling,
+            and the development and application of large language models.
+        </p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <article>
+            <header>
+                <h3>University of California, San Diego</h3>
+                <p>
+                    <time datetime="2024-09">Sep 2024</time> –
+                    <time datetime="2028-06">Jun 2028</time> (expected)
+                </p>
+            </header>
+            <p>B.S. in Data Science; Minor in Mathematics</p>
+            <p>GPA: 3.95 / 4.00</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Research Experience</h2>
+
+        <article>
+            <header>
+                <h3>Ay Lab, La Jolla Institute for Immunology</h3>
+                <p><strong>Cross-Study Generalization in Immune-Response Prediction: CMI-Flu Challenge</strong></p>
+                <p>
+                    <time datetime="2026-07">Jul 2026</time> –
+                    <time datetime="2026-09">Sep 2026</time>
+                </p>
+            </header>
+            <ul>
+                <li>
+                    Developed cross-study models for the
+                    <a href="https://www.kaggle.com/competitions/cmi-flu-first-prediction-challenge" target="_blank">CMI-Flu 1st Prediction Challenge</a>,
+                    predicting post-vaccination immune responses from pre-vaccination profiles across 59 studies,
+                    4,805 participant records, and 8 assay modalities (~89M RNA-seq rows).
+                </li>
+                <li>
+                    Built cross-study preprocessing and validation pipelines with within-study percentile-rank
+                    normalization, modality-specific MICE/kNN imputation, and leave-one-study-out evaluation that
+                    excluded repeat participants from training.
+                </li>
+                <li>
+                    Designed a two-stage prediction procedure aligned with the challenge evaluation: modeled
+                    within-study response percentiles for Spearman-based assessment, then constructed a
+                    cohort-specific target response distribution and converted predicted percentiles to absolute
+                    response values through quantile matching; validated the procedure with leave-one-study-out and
+                    bootstrap analyses.
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <header>
+                <h3>Sebat Lab, UC San Diego</h3>
+                <p><strong>Family-Based Analysis of Genetic and Socioeconomic Variation in Autism</strong></p>
+                <p>
+                    <time datetime="2026-04">Apr 2026</time> –
+                    <time datetime="2026-06">Jun 2026</time>
+                </p>
+            </header>
+            <ul>
+                <li>
+                    Developed family-aware statistical-genomics workflows for 113,045 individuals from 52,333 SSC and
+                    SPARK families, integrating common polygenic risk, rare inherited/de novo variation, measured air
+                    pollution, and neighborhood deprivation.
+                </li>
+                <li>
+                    Characterized correlation structure among 12 standardized polygenic scores and their within-family
+                    associations with autism using sibling-only and expanded-control conditional logistic models;
+                    compared marginal and joint effects, then tested ADI-related attenuation of
+                    PGS–PM<sub>2.5</sub>/NO<sub>2</sub> associations with same-sample family-clustered models
+                    (20,615 individuals; 13,983 families).
+                </li>
+                <li>
+                    Conducted 32,197 family-stratified, per-gene tests of loss-of-function and damaging-missense
+                    carrier enrichment using Mantel–Haenszel analysis; separately modeled per-individual counts of
+                    qualifying inherited and de novo variants across 20,793 informative families with conditional
+                    logistic regression.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Industry Experience</h2>
+        <article>
+            <header>
+                <h3>Software Development Intern</h3>
+                <p>PatPat, Shenzhen, China</p>
+                <p>
+                    <time datetime="2025-06">Jun 2025</time> –
+                    <time datetime="2025-08">Aug 2025</time>
+                </p>
+            </header>
+            <ul>
+                <li>
+                    Implemented a bulk-delete feature for warehouse inventory-update records generated during product
+                    receiving in PatPat's internal fulfillment system (Java Spring Boot backend, Vue 3 / Ant Design Vue
+                    front end).
+                </li>
+                <li>
+                    Built a Spring Boot backend for user management (account creation, lookup, and login APIs) that stores
+                    data in a relational database through JPA, uses Redis for caching and RabbitMQ for asynchronous messaging,
+                    and automatically logs every API request with Spring AOP.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>
+                <strong>Machine learning:</strong> regularized regression, random forests, gradient boosting,
+                ensemble methods, feature engineering, MICE/kNN imputation, and nested/leave-one-study-out validation.
+            </li>
+            <li>
+                <strong>Statistical genomics:</strong> conditional logistic regression, Mantel–Haenszel estimates,
+                clustered standard errors, polygenic scores, and rare-variant burden analysis.
+            </li>
+            <li>
+                <strong>Programming and systems:</strong> Python, R, Java, Git/GitLab.
+            </li>
+        </ul>
+    </section>
 </body>
 </html>
