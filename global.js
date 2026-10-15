@@ -14,8 +14,8 @@ function $$(selector, context = document) {
 
 const BASE_PATH =
   location.hostname === 'localhost' || location.hostname === '127.0.0.1'
-    ? '/'            // 本地
-    : '/DSC106_Lab/';       // GitHub Pages 的仓库名，改成你实际的 repo 名
+    ? '/'            
+    : '/DSC106_Lab/';       
 
 let pages = [
   { url: '', title: 'Home' },
@@ -32,22 +32,48 @@ for (let p of pages) {
   let url = p.url;
   let title = p.title;
 
-  // 相对路径加上 BASE_PATH，外链不动
   url = !url.startsWith('http') ? BASE_PATH + url : url;
 
   let a = document.createElement('a');
   a.href = url;
   a.textContent = title;
 
-  // 当前页加 current
   a.classList.toggle(
     'current',
     a.host === location.host && a.pathname === location.pathname,
   );
 
-  // 外链新标签页打开
   a.toggleAttribute('target', a.host !== location.host);
   if (a.host !== location.host) a.target = '_blank';
 
   nav.append(a);
 }
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+  <label class="color-scheme">
+    Theme:
+    <select>
+      <option value="light dark">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>`,
+);
+
+let select = document.querySelector('.color-scheme select');
+
+function setColorScheme(scheme) {
+  document.documentElement.style.setProperty('color-scheme', scheme);
+  select.value = scheme;
+}
+
+if ('colorScheme' in localStorage) {
+  setColorScheme(localStorage.colorScheme);
+}
+
+select.addEventListener('input', (event) => {
+  setColorScheme(event.target.value);
+  localStorage.colorScheme = event.target.value;
+});
