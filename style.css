@@ -145,3 +145,75 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 200%;
   font-weight: bold;
 }
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  color: gray;
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 0.5em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--color);
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1.5em;
+  font: inherit;
+  box-sizing: border-box;
+}
