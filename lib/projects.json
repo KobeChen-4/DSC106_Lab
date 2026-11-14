@@ -1,5 +1,12 @@
 [
     {
+        "title": "Bikewatching",
+        "year": "2026",
+        "image": "https://dsc106.com/labs/lab07/images/stations-stroke.png",
+        "url": "https://kobechen-4.github.io/bikewatching/",
+        "description": "Interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge (March 2024). Circle size shows station traffic, color shows departure vs. arrival flow, and a time slider filters trips by time of day."
+    },
+    {
         "title": "Lorem ipsum dolor sit.",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
